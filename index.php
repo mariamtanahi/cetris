@@ -31,7 +31,13 @@
     <!-- <link rel="icon" href="images/favicon.png"> -->
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbarExample">
-    
+    <div class="preloader" id="preloader">
+        <div  iv class="d-flex justify-content-center ">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
     <!-- Navigation -->
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
         <div class="container">
@@ -305,37 +311,37 @@
                                 <p><strong>handwash</strong></p>
                             </a>
                         </div>
-                        <div class="element-item design cetris">
+                        <div class="element-item  cetris">
                             <a href="article.html">
                                 <img class="img-fluid" src="images/cetris-bottle2.jpg" alt="alternative">
                                 <p><strong>lemon</strong></p>
                             </a>
                         </div>
-                        <div class="element-item design handwash">
+                        <div class="element-item  handwash">
                             <a href="article.html">
                                 <img class="img-fluid" src="images/handwash.png" alt="alternative">
                                 <p><strong>handwash</strong></p>
                             </a>
                         </div>
-                        <div class="element-item design disinfectant">
+                        <div class="element-item  disinfectant">
                             <a href="article.html">
                                 <img class="img-fluid" src="images/Disinfectant.png" alt="alternative">
                                 <p><strong>disinfectant</strong></p>
                             </a>
                         </div>
-                        <div class="element-item design cetris">
+                        <div class="element-item  cetris">
                             <a href="article.html">
                                 <img class="img-fluid" src="images/cetris-bottle3.jpg" alt="alternative">
                                 <p><strong>lemon</strong></p>
                             </a>
                         </div>
-                        <div class="element-item design cetris">
+                        <div class="element-item  cetris">
                             <a href="article.html">
                                 <img class="img-fluid" src="images/cetris-bottle.jpg" alt="alternative">
                                 <p><strong>lavender</strong> </p>
                             </a>
                         </div>
-                        <div class="element-item design cetris">
+                        <div class="element-item  cetris">
                             <a href="article.html">
                                 <img class="img-fluid" src="images/cetris-bottle2.jpg" alt="alternative">
                                 <p><strong>lemon</strong></p>
@@ -549,12 +555,17 @@ a mirror.</p>
         <img src="images/up-arrow.png" alt="alternative">
     </button>
     <!-- end of back to top button -->
+    
     	
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
     <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script>
+     
+    </script>
 </body>
 </html>

@@ -40,6 +40,9 @@ html {
 	height: 100%;
 }
 
+
+
+
 body, p {
 	color: #5e6576; 
 	font: 400 1rem/1.625rem "Open Sans", sans-serif;
@@ -1656,3 +1659,28 @@ select {
 	/* end of extra pages */
 }
 /* end of min-width 1200px */
+
+.preloader {
+	position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background: #fff;
+z-index: 9999;
+transition: 0.8s;
+opacity: 1;
+
+}
+
+.preloader .spinner-border {
+	position: absolute;
+    top: 50%;
+
+}
+
+ 
+ .fadeOut {
+opacity: 0;
+ }
+

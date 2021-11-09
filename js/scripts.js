@@ -1,4 +1,5 @@
 /* Description: Custom JS file */
+/* loader */
 
 /* Navigation*/
 // Collapse the navbar by adding the top-nav-collapse class
@@ -8,8 +9,12 @@ window.onscroll = function () {
 };
 
 window.onload = function () {
+	document.getElementById("preloader").classList.add('fadeOut');
+
 	scrollFunction();
 };
+
+
 
 function scrollFunction() {
 	if (document.documentElement.scrollTop > 30) {
@@ -94,6 +99,10 @@ var cardSlider = new Swiper('.card-slider', {
 
 
 /* Filter - Isotope */
+Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+	var msnry = new Masonry('.grid');
+	msnry.layout();
+});
 const gridCheck = document.querySelector('.grid');
 
 if (gridCheck !== null) { 
