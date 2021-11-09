@@ -9,8 +9,8 @@ window.onscroll = function () {
 };
 
 window.onload = function () {
-	document.getElementById("preloader").classList.add('fadeOut');
-
+	document.getElementById("preloader").classList.add('fadeOut').then(classList.add('d-none'));
+	
 	scrollFunction();
 };
 
