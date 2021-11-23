@@ -43,7 +43,7 @@
         <div class="container">
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html">CETRIS</a> 
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo3.svg" alt=""></a> 
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <!-- <a class="navbar-brand logo-text" href="index.html">Zinc</a> -->
