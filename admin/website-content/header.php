@@ -34,7 +34,7 @@
                       <div class="form-group">
                         <label for="header-photo">Choose photo</label>
                         <input type="file" class="form-control-file" id="header-photo" name="header_photo">
-                        <img src="../img/<?php echo $photo; ?>" width="200px" height="50px">
+                        <img src="img/<?php echo $photo; ?>" width="200px" height="50px">
                         
                       </div>
                     <button class="btn btn-primary">Submit</button>

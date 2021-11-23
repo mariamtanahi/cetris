@@ -211,9 +211,9 @@ else{?>
    		<td><?php echo $data['content_section']; ?></td>
    		<td><?php echo $data['first_title']; ?></td>
    		
-   		<td><a  href="dashboard.php?cat=website-content&subcat=home-content&view=<?php echo $data['id']; ?>" class="text-secondary content-link"><i class='far fa-eye'></i></a></td>
-        <td><a href="dashboard.php?cat=website-content&subcat=add-home-content&edit=<?php echo $data['id']; ?>" class="text-success content-link"><i class=' far fa-edit'></i></a></td>
-        <td><a href="javascript:void(0)" class="text-danger delete"  name="home_content" id="<?php echo $data['id']; ?>"><i class='far fa-trash-alt'></i></a></td>
+   		<td><a  href="dashboard.php?cat=website-content&subcat=home-content&view=<?php echo $data['id']; ?>" class="text-secondary content-link">view</a></td>
+        <td><a href="dashboard.php?cat=website-content&subcat=add-home-content&edit=<?php echo $data['id']; ?>" class="text-success content-link">edit</a></td>
+        <td><a href="javascript:void(0)" class="text-danger delete"  name="home_content" id="<?php echo $data['id']; ?>">delete</a></td>
 
    	</tr>
    	<?php

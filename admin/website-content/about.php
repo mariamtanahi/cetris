@@ -31,7 +31,7 @@
                       <div class="form-group">
                         <label for="about-photo">Choose photo for main photo</label>
                         <input type="file" class="form-control-file" id="about-photo" name="about_photo">
-                        <img src="../img/<?php echo $photo; ?>" width="200px" height="50px">
+                        <img src="img/<?php echo $photo; ?>" width="200px" height="50px">
                     </div>
                         <div class="form-group">
                         <label for="modal-paragraph">PopUp paragraph</label>
@@ -40,7 +40,7 @@
                       <div class="form-group">
                         <label for="modal-photo">Choose photo for popup paragraph</label>
                         <input type="file" class="form-control-file" id="modal-photo" name="modal_photo">
-                        <img src="../img/<?php echo $modalPhoto; ?>" width="200px" height="50px">                       
+                        <img src="img/<?php echo $modalPhoto; ?>" width="200px" height="50px">                       
                       </div>
                     <button class="btn btn-primary">Submit</button>
                   </form>

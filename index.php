@@ -26,6 +26,8 @@
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
+    <link href="glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/svg" href="images/logo.svg"/>
 	
 	<!-- Favicon  -->
     <!-- <link rel="icon" href="images/favicon.png"> -->
@@ -43,7 +45,9 @@
         <div class="container">
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo3.svg" alt=""></a> 
+            <a class="navbar-brand logo-image" href="index.html">
+                <img src="images/logo.svg">
+            </a> 
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <!-- <a class="navbar-brand logo-text" href="index.html">Zinc</a> -->
@@ -61,19 +65,9 @@
                         <a class="nav-link" href="#services">Values</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Products</a>
+                        <a class="nav-link" href="#portfolio">Products</a>
                     </li>
-                   
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="article.html">Article Details</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
-                        </ul>
-                    </li>
+            
                 </ul>
                 <span class="nav-item">
                     <a class="btn-solid-sm" href="#contact">Contact Us</a>
@@ -99,7 +93,7 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6 col-xl-7">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/header-illustration.svg" alt="alternative">
+                        <img class="img-fluid" src="images/header.svg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -228,8 +222,6 @@
                                 expert in his/her field, makeup for a freshly driven
                                 organization.
                                 </p>
-                       
-                        <a id="modalCtaBtn" class="btn-solid-reg" href="#">Details</a>
                         <button type="button" class="btn-outline-reg" data-bs-dismiss="modal">Close</button>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
@@ -275,86 +267,159 @@
 
 
     <!-- Projects -->
-	<div id="projects" class="filter bg-gray">
-		<div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">Products that we're proud of</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
+	<section id="portfolio" class="portfolio">
+
+        <div class="container" data-aos="fade-up">
+  
+          <header class="section-header">
+            <h2>Portfolio</h2>
+            <p>Check our latest work</p>
+          </header>
+  
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-cetris">Cetris</li>
+                <li data-filter=".filter-disinfectant">Disinfectant</li>
+                <li data-filter=".filter-handwash">Handwash</li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cetris">
+              <div class="portfolio-wrap">
+                <img src="images/cetris-bottle.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>cetris 1</h4>
+                  <p>cetris</p>
+                  <div class="portfolio-links">
+                    <a href="images/cetris-bottle.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Cetris 1"><i class="fas fa-plus"></i></a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-disinfectant">
+              <div class="portfolio-wrap">
+                <img src="images/Disinfectant.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Disinfectant 3</h4>
+                  <p>Disinfectant</p>
+                  <div class="portfolio-links">
+                    <a href="images/Disinfectant.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Disinfectant 3"><i class="fas fa-plus"></i></a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cetris">
+              <div class="portfolio-wrap">
+                <img src="images/cetris-bottle2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>cetris 2</h4>
+                  <p>cetris</p>
+                  <div class="portfolio-links">
+                    <a href="images/cetris-bottle2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Cetris 2"><i class="fas fa-plus"></i></a>
                     
-                    <!-- Filter -->
-                    <div class="button-group filters-button-group">
-                        <button class="button is-checked" data-filter="*">ALL</button>
-                        <button class="button" data-filter=".cetris">Cetris</button>
-                        <button class="button" data-filter=".disinfectant">Disinfectant</button>
-                        <button class="button" data-filter=".handwash">hand wash</button>
-                    </div> <!-- end of button group -->
-                    <div class="grid">
-                        <div class="element-item cetris">
-                            <a href="article.html">
-                                <img class="img-fluid" src="images/cetris-bottle.jpg" alt="alternative">
-                                <p><strong>lavender</strong></p>
-                            </a>
-                        </div>
-                        <div class="element-item disinfectant">
-                            <a href="article.html">
-                                <img class="img-fluid" src="images/Disinfectant.png" alt="alternative">
-                                <p><strong>disinfectant</strong></p>
-                            </a>
-                        </div>
-                        <div class="element-item handwash">
-                            <a href="article.html">
-                                <img class="img-fluid" src="images/handwash.png" alt="alternative">
-                                <p><strong>handwash</strong></p>
-                            </a>
-                        </div>
-                        <div class="element-item  cetris">
-                            <a href="article.html">
-                                <img class="img-fluid" src="images/cetris-bottle2.jpg" alt="alternative">
-                                <p><strong>lemon</strong></p>
-                            </a>
-                        </div>
-                        <div class="element-item  handwash">
-                            <a href="article.html">
-                                <img class="img-fluid" src="images/handwash.png" alt="alternative">
-                                <p><strong>handwash</strong></p>
-                            </a>
-                        </div>
-                        <div class="element-item  disinfectant">
-                            <a href="article.html">
-                                <img class="img-fluid" src="images/Disinfectant.png" alt="alternative">
-                                <p><strong>disinfectant</strong></p>
-                            </a>
-                        </div>
-                        <div class="element-item  cetris">
-                            <a href="article.html">
-                                <img class="img-fluid" src="images/cetris-bottle3.jpg" alt="alternative">
-                                <p><strong>lemon</strong></p>
-                            </a>
-                        </div>
-                        <div class="element-item  cetris">
-                            <a href="article.html">
-                                <img class="img-fluid" src="images/cetris-bottle.jpg" alt="alternative">
-                                <p><strong>lavender</strong> </p>
-                            </a>
-                        </div>
-                        <div class="element-item  cetris">
-                            <a href="article.html">
-                                <img class="img-fluid" src="images/cetris-bottle2.jpg" alt="alternative">
-                                <p><strong>lemon</strong></p>
-                            </a>
-                        </div>
-                    </div> <!-- end of grid -->
-                    <!-- end of filter -->
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-handwash">
+              <div class="portfolio-wrap">
+                <img src="images/handwash.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>handwash 2</h4>
+                  <p>handwash</p>
+                  <div class="portfolio-links">
+                    <a href="images/handwash.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="handwash 2"><i class="fas fa-plus"></i></a>
+                 
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-disinfectant">
+              <div class="portfolio-wrap">
+                <img src="images/Disinfectant.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Disinfectant 2</h4>
+                  <p>Disinfectant</p>
+                  <div class="portfolio-links">
+                    <a href="images/Disinfectant.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Disinfectant 2"><i class="fas fa-plus"></i></a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-cetris">
+              <div class="portfolio-wrap">
+                <img src="images/cetris-bottle3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>cetris 3</h4>
+                  <p>cetris</p>
+                  <div class="portfolio-links">
+                    <a href="images/cetris-bottle3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Cetris 3"><i class="fas fa-plus"></i></a>
                     
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-		</div> <!-- end of container -->
-    </div> <!-- end of filter -->
-    <!-- end of projects -->
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-handwash">
+              <div class="portfolio-wrap">
+                <img src="images/handwash.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>handwash 1</h4>
+                  <p>handwash</p>
+                  <div class="portfolio-links">
+                    <a href="images/handwash.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="handwash 1"><i class="fas fa-plus"></i></a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-handwash">
+              <div class="portfolio-wrap">
+                <img src="images/handwash.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>handwash 3</h4>
+                  <p>handwash</p>
+                  <div class="portfolio-links">
+                    <a href="images/handwash.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="handwash 3"><i class="fas fa-plus"></i></a>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-disinfectant">
+              <div class="portfolio-wrap">
+                <img src="images/Disinfectant.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>disinfectant 3</h4>
+                  <p>disinfectant</p>
+                  <div class="portfolio-links">
+                    <a href="images/Disinfectant.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Disinfectant 3"><i class="fas fa-plus"></i></a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- End Portfolio Section -->
 
 
     <!-- Testimonials -->
@@ -489,7 +554,7 @@ a mirror.</p>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>Pellentesque aliquet mi eu tortor dictum, non imperdiet ante viverra. Phasellus eget enim orci ut pellentes troc</h4>
+                    
                     <div class="social-container">
                         <span class="fa-stack">
                             <a href="#your-link">
@@ -533,15 +598,8 @@ a mirror.</p>
     <div class="copyright bg-gray">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <ul class="list-unstyled li-space-lg p-small">
-                        <li><a href="article.html">Article Details</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                    </ul>
-                </div> <!-- end of col -->
-                <div class="col-lg-3">
-                    <p class="p-small statement">Copyright © <a href="#">Your name</a></p>
+                <div class="col-lg-12">
+                    <p class="p-small statement">Copyright © <a href="#">Mariam Ahmad</a></p>
                 </div> <!-- end of col -->
 
             </div> <!-- enf of row -->
@@ -563,6 +621,7 @@ a mirror.</p>
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
     <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+    <script src="glightbox/js/glightbox.min.js"></script>
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
     <script>
      

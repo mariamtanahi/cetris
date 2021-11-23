@@ -4,7 +4,7 @@ session_start();
 include('config/database.php');
 if(empty($_SESSION['email']))
 {
-  header("location:index.php");
+  header("location:/index.php");
 }
 ?>
 
@@ -61,11 +61,12 @@ if(empty($_SESSION['email']))
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-          </div>
+         
+          <div id="confirmBox">
+  <p>Are You Sure to Delete ?</p>
+  <button value="1" >Yes</button><button value="0">No</button>
+ </div>
           <div id="alertBox">
-          <span class='fail'>Error!.. check your query</span>
           </div>
           <!-- Content Row -->
           <div class="row" id="dynamic-page">

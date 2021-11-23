@@ -1,5 +1,30 @@
 /* Description: Custom JS file */
-/* loader */
+
+
+ /**
+   * Easy selector helper function
+   */
+  const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
+
+  /**
+   * Easy event listener function
+   */
+  const on = (type, el, listener, all = false) => {
+    if (all) {
+      select(el, all).forEach(e => e.addEventListener(type, listener))
+    } else {
+      select(el, all).addEventListener(type, listener)
+    }
+  }
+
+
 
 /* Navigation*/
 // Collapse the navbar by adding the top-nav-collapse class
@@ -9,8 +34,8 @@ window.onscroll = function () {
 };
 
 window.onload = function () {
-	document.getElementById("preloader").classList.add('fadeOut').then(classList.add('d-none'));
-	
+	document.getElementById("preloader").classList.add('fadeOut');
+
 	scrollFunction();
 };
 
@@ -98,50 +123,6 @@ var cardSlider = new Swiper('.card-slider', {
 });
 
 
-/* Filter - Isotope */
-Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
-	var msnry = new Masonry('.grid');
-	msnry.layout();
-});
-const gridCheck = document.querySelector('.grid');
-
-if (gridCheck !== null) { 
-	// init Isotope
-	var iso = new Isotope( '.grid', {
-		itemSelector: '.element-item',
-		layoutMode: 'fitRows'
-	});
-
-	// bind filter button click
-	var filtersElem = document.querySelector('.filters-button-group');
-	filtersElem.addEventListener( 'click', function( event ) {
-		// only work with buttons
-		if ( !matchesSelector( event.target, 'button' ) )  {
-			return;
-		}
-		var filterValue = event.target.getAttribute('data-filter');
-		// use matching filter function
-		iso.arrange({ filter: filterValue });
-	});
-	
-	// change is-checked class on buttons
-	var buttonGroups = document.querySelectorAll('.button-group');
-	for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-		var buttonGroup = buttonGroups[i];
-		radioButtonGroup( buttonGroup );
-	}
-	
-	function radioButtonGroup( buttonGroup ) {
-		buttonGroup.addEventListener( 'click', function( event ) {
-			// only work with buttons
-			if ( !matchesSelector( event.target, 'button' ) )  {
-				return;
-			}
-			buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
-			event.target.classList.add('is-checked');
-		});
-	}
-}
 
 
 /* Back To Top Button */
@@ -162,3 +143,54 @@ function topFunction() {
 	document.body.scrollTop = 0; // for Safari
 	document.documentElement.scrollTop = 0; // for Chrome, Firefox, IE and Opera
 }
+
+/* portfolio */
+
+window.addEventListener('load', () => {
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+      });
+
+      let portfolioFilters = select('#portfolio-flters li', true);
+
+      on('click', '#portfolio-flters li', function(e) {
+        e.preventDefault();
+        portfolioFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        portfolioIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        aos_init();
+      }, true);
+    }
+
+  });
+
+  /**
+   * Initiate portfolio lightbox 
+   */
+  const portfolioLightbox = GLightbox({
+    selector: '.portfokio-lightbox'
+  });
+
+  /**
+   * Portfolio details slider
+   */
+  new Swiper('.portfolio-details-slider', {
+    speed: 400,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });

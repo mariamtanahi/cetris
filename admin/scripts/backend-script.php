@@ -2,40 +2,6 @@
 require_once('../config/database.php'); 
 $db= $conn; // update with your database connection
 
-// ============= color setting ============ //
-// update 
-if(!empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='color_setting')
-{
-
-  extract($_POST);
-   
-   
-      $data= [
-        'navbar_background'=>$navbar_background,
-        'sidebar_background'=>$sidebar_background,
-        'text_color'=>$text_color,
-        'save_button_color'=>$save_button_color,
-        'edit_button_color'=>$edit_button_color,
-        'delete_button_color'=>$delete_button_color,
-        'view_button_color'=>$view_button_color,
-        'label_text_color'=>$label_text_color
-       
-     ];
-  
-
-    $tableName=$_GET['name']; 
-    $id= $_GET['id'];
-  echo "hh";
-  $updateData=update_data($data,$tableName, $id);
-   if($updateData){
-    echo "<span class='success'>colors was updated sucessfully</span>";
-   }else{
-    echo "<span class='fail'>Error!.. check your query</span>";
-   }
-
-  
-}
-
 //================ admin Rol==================///
 
 // update
@@ -69,20 +35,16 @@ if( !empty($_GET['id']) && !empty($_GET['tableName']) && $_GET['role']=='admin')
 
 }
 
-//=========home content =================--//
+//=========qoutes content =================--//
 
 // insert
-if(empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='home_content'){
+if(empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='qoutes'){
    extract($_POST);
-  if(!empty($first_title)){
+  if(!empty($qoute_body)){
    
       $data= [
-        'content_section'=>$content_section,
-       'first_title' =>$first_title,
-       'second_title'=>$second_title,
-       'description'=>$description
-       
-     ];
+        'qoute_body'=>$qoute_body,
+      ];
   
 
     $tableName=$_GET['name']; 
@@ -90,32 +52,28 @@ if(empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='home_content')
     if(!empty($data) && !empty($tableName)){
        $insertData=insert_data($data,$tableName);
        if($insertData){
-         echo "<span class='success'>Home Content saved sucessfully</span>";
+         echo "<span class='success'>Qoute saved sucessfully</span>";
        }else{
          echo "<span class='fail'>Error!.. check your query</span>";
        }
     }
 
 }else{
-  echo "<span class='fail'>Home Content field is empty</span>";
+  echo "<span class='fail'>Qoute field is empty</span>";
 }
 
 }
 
 // update 
-if(!empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='home_content')
+if(!empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='qoutes')
 {
 
   extract($_POST);
    
-   if(!empty($first_title)){
+   if(!empty($qoute_body)){
    
       $data= [
-        'content_section'=>$content_section,
-       'first_title' =>$first_title,
-       'second_title'=>$second_title,
-       'description'=>$description
-       
+        'qoute_body'=>$qoute_body,
      ];
   
 
@@ -124,13 +82,13 @@ if(!empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='home_content'
   
   $updateData=update_data($data,$tableName, $id);
    if($updateData){
-    echo "<span class='success'>How content was updated sucessfully</span>";
+    echo "<span class='success'>Qoute was updated sucessfully</span>";
    }else{
     echo "<span class='fail'>Error!.. check your query</span>";
    }
 
   }else{
-   echo "<span class='fail'>Home Content field is empty</span>";
+   echo "<span class='fail'>Qoute field is empty</span>";
   }
 }
 
@@ -500,87 +458,6 @@ if(!empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='journey_secti
 }
 
 
-// =========website menu =================--//
-
-// insert
-if( !empty($_GET['name']) && $_GET['name']=='categories' && empty($_GET['id'])){
-   extract($_POST);
-   
-  if(!empty($category_name)){
-    $header=!empty($header_menu)?$header_menu:0;
-    $footer=!empty($footer_menu)?$footer_menu:0;
-     $data= [
-       'parent_id' =>$parent_id,
-       'category_name'=>$category_name,
-       'menu_link'=>$menu_link,
-       'header_menu'=>$header,
-       'footer_menu'=>$footer,
-       'description'=>$description
-     ];
-  
-
-    $tableName=$_GET['name']; 
-
-    if(!empty($data) && !empty($tableName)){
-       $insertData=insert_data($data,$tableName);
-       if($insertData){
-         echo "<span class='success'>Website menu saved sucessfully</span>";
-       }else{
-         echo "<span class='fail'>Error!.. check your query</span>";
-       }
-    }
-
-}else{
-  echo "<span class='fail'>Website menu field is empty</span>";
-}
-
-}
-
-// update 
-if(!empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='categories')
-{
-
-  extract($_POST);
-   
-  if(!empty($category_name)){
-    $header=!empty($header_menu)?$header_menu:0;
-    $footer=!empty($footer_menu)?$footer_menu:0;
-     $data= [
-       'parent_id' =>$parent_id,
-       'category_name'=>$category_name,
-        'menu_link'=>$menu_link,
-       'header_menu'=>$header,
-       'footer_menu'=>$footer,
-       'description'=>$description
-     ];
-  
-
-    $tableName=$_GET['name']; 
-    $id= $_GET['id'];
-  
-  $updateData=update_data($data,$tableName, $id);
-   if($updateData){
-    echo "<span class='success'>adsense code updated sucessfully</span>";
-   }else{
-    echo "<span class='fail'>Error!.. check your query</span>";
-   }
-
-  }else{
-   echo "<span class='fail'>adsense code field is empty</span>";
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ======= delete data from database ============//
 
@@ -600,64 +477,6 @@ if(!empty($_GET['deleteId']) && !empty($_GET['deleteData']))
     }
    
 }
-
-
-//======head script====//
-
-// insert data
-if(!empty($_GET['name']) && $_GET['name']=='head_script'){
-   extract($_POST);
-  if(!empty($script)){
-     $data= [
-       'script' =>$script
-     ];
-  
-
-    $tableName='head_section_script'; 
-
-    if(!empty($data) && !empty($tableName)){
-       $insertData=insert_data($data,$tableName);
-       if($insertData){
-         echo "<span class='success'>Head Script saved sucessfully</span>";
-       }else{
-         echo "<span class='fail'>Error!.. check your query</span>";
-       }
-    }
-
-}else{
-  echo "<span class='fail'>Head Script  field is empty</span>";
-}
-
-}
-
-// update data
-if(!empty($_GET['id']) && !empty($_GET['name']) && $_GET['name']=='update_head_script')
-{
-
-   $id= legal_input($_GET['id']);
-   $name=legal_input($_GET['name']);
-   $tableName='head_section_script';
-   extract($_POST);
-  if(!empty($script)){
-     $data= [
-       'script' =>$script
-     ];
-  
-
-  
-  $updateData=update_data($data,$tableName, $id);
-   if($updateData){
-    echo "<span class='success'>Head Script updated sucessfully</span>";
-   }else{
-    echo "<span class='fail'>Error!.. check your query</span>";
-   }
-
-  }else{
-   echo "<span class='fail'>Head Script field is empty</span>";
-  }
-}
-
-
 
 
 
@@ -947,24 +766,6 @@ function delete_data($tableName, $id){
   }
 
 }
-function delete_menu($tableName, $id, $menu){
-  global $db;
-  if($menu=='header_menu')
-  {
-    $query="DELETE FROM ".$tableName." WHERE id=$id AND header_menu=1";
-
-  }else if($menu=='footer_menu'){
-$query="DELETE FROM ".$tableName." WHERE id=$id AND footer_menu=1";
-  }
-  
-  $result= $db->query($query);
-  if($result){
-     return true;
-  }else{
-     echo "Error found in ".$db->error;
-  }
-
-}
 // convert illegal input value to ligal value formate
 function legal_input($value) {
   $value = trim($value);
@@ -1008,29 +809,6 @@ function check_unique_content($tableName){
        $totalRows= $result->num_rows;
       return $totalRows;
       
-
-
-
-
-}
-function check_unique_menu($tableName, $menuName){
-
-  global $db;
-  
-
-      $query="SELECT * FROM ".$tableName." WHERE menu_name='".$menuName."'";
-
-       $result= $db->query($query);
-       if($result)
-       {
-       $totalRows= $result->num_rows;
-       return $totalRows;
-      }else{
-      return $totalRows=0;
-     }
-
-       return $db->error;
-     
 
 
 

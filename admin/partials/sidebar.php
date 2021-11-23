@@ -40,6 +40,7 @@
       <a class="collapse-item content-link" href="dashboard.php?cat=website-content&subcat=values">Our Values Section</a>
       <a class="collapse-item content-link" href="dashboard.php?cat=website-content&subcat=about">About Us section</a>
       <a class="collapse-item content-link" href="dashboard.php?cat=website-content&subcat=journey">Our journey section</a>
+      <a class="collapse-item content-link" href="dashboard.php?cat=website-content&subcat=qoutes">Qoutes section</a>
       <a class="collapse-item content-link" href="header.html">Products section</a>
     </div>
   </div>
@@ -49,11 +50,13 @@
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseValues" aria-expanded="true" aria-controls="collapseUtilities">
     <i class="fas fa-fw fa-cog"></i>
-    <span>Our values</span>
+    <span>Contact Us</span>
   </a>
   <div id="collapseValues" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <a class="collapse-item" href="values.html">Update Values</a>
+      <a class="collapse-item content-link" href="dashboard.php?cat=contact&subcat=contact-details">Contact details</a>
+      <a class="collapse-item content-link" href="dashboard.php?cat=contact&subcat=contact-us-message">messages</a>
+    
     </div>
   </div>
 </li>
@@ -61,48 +64,14 @@
 <li class="nav-item">
   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAbout" aria-expanded="true" aria-controls="collapseTwo">
     <i class="fas fa-fw fa-cog"></i>
-    <span>About us</span>
+    <span>Admins</span>
   </a>
   <div id="collapseAbout" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Update about us section:</h6>
-      <a class="collapse-item" href="buttons.html">side Photo</a>
-      <a class="collapse-item" href="cards.html">Title</a>
-      <a class="collapse-item" href="cards.html">description</a>
-      <a class="collapse-item" href="cards.html">modal photo</a>
-      <a class="collapse-item" href="cards.html">modal paragraph</a>
+      <a class="collapse-item" href="dashboard.php?cat=website-admin&subcat=admin-profile">Admin list</a>
     </div>
   </div>
 </li>
-
-<!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item">
-  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseJourney" aria-expanded="true" aria-controls="collapseTwo">
-    <i class="fas fa-fw fa-cog"></i>
-    <span>our Journey</span>
-  </a>
-  <div id="collapseJourney" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-    <div class="bg-white py-2 collapse-inner rounded">
-      <a class="collapse-item" href="cards.html">update Our journey</a>
-    </div>
-  </div>
-</li>
-<!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item">
-  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="true" aria-controls="collapseTwo">
-    <i class="fas fa-fw fa-cog"></i>
-    <span>Products</span>
-  </a>
-  <div id="collapseProducts" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-    <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Update products gallary:</h6>
-      <a class="collapse-item" href="buttons.html">add product</a>
-      <a class="collapse-item" href="cards.html">edit product</a>
-      <a class="collapse-item" href="cards.html">delete product</a>
-    </div>
-  </div>
-</li>
-
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
